@@ -23,7 +23,7 @@
 
 **Status:** 🟢 Active — on App Store
 
-**Last Push:** Mar 11, 2026 (2d ago)
+**Last Push:** Mar 11, 2026 (3d ago)
 
 **Tech Stack:** `iOS` · `Swift` · `TelemetryDeck` · `GitHub Pages`
 
@@ -54,7 +54,7 @@
 
 **Status:** 🟢 Active — on App Store
 
-**Last Push:** Mar 11, 2026 (2d ago)
+**Last Push:** Mar 11, 2026 (3d ago)
 
 **Tech Stack:** `Swift` · `iOS Widget` · `JavaScript` · `Backend`
 
@@ -84,7 +84,7 @@
 
 **Status:** 🟢 Active — running daily
 
-**Last Push:** Mar 11, 2026 (2d ago)
+**Last Push:** Mar 11, 2026 (3d ago)
 
 **Tech Stack:** `Python 3.12` · `GitHub Actions` · `PyJWT` · `HTML` · `Gmail SMTP`
 
@@ -127,7 +127,7 @@
 
 **Status:** 🟢 Active — deployed on GCP
 
-**Last Push:** Mar 7, 2026 (6d ago)
+**Last Push:** Mar 7, 2026 (7d ago)
 
 **Tech Stack:** `Python` · `FastAPI` · `React` · `Plotly.js` · `Mapbox` · `XGBoost` · `Prophet` · `scikit-learn` · `BigQuery` · `Cloud Run` · `GCP`
 
