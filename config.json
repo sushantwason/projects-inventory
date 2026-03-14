@@ -1,0 +1,129 @@
+{
+  "projects": [
+    {
+      "name": "PatchPal",
+      "repo": "patchpal-legal",
+      "type": "iOS App",
+      "status": "active",
+      "status_note": "on App Store",
+      "description": "iOS app on the App Store. Uses TelemetryDeck for in-app analytics. Legal docs hosted via GitHub Pages. Feedback email: patchpalfeedback@gmail.com.",
+      "stack": ["iOS", "Swift", "TelemetryDeck", "GitHub Pages"],
+      "links": {
+        "Privacy Policy": "https://sushantwason.github.io/patchpal-legal/",
+        "App Store": ""
+      },
+      "schedulers": [],
+      "secrets": [
+        { "name": "ASC_KEY_ID",      "purpose": "App Store Connect API key ID",  "where": "app-dashboard GitHub Actions" },
+        { "name": "ASC_ISSUER_ID",   "purpose": "App Store Connect issuer ID",   "where": "app-dashboard GitHub Actions" },
+        { "name": "ASC_PRIVATE_KEY", "purpose": "App Store Connect .p8 key",     "where": "app-dashboard GitHub Actions" },
+        { "name": "TD_EMAIL",        "purpose": "TelemetryDeck login",           "where": "app-dashboard GitHub Actions" },
+        { "name": "TD_PASSWORD",     "purpose": "TelemetryDeck password",        "where": "app-dashboard GitHub Actions" }
+      ],
+      "todos": [],
+      "notes": [
+        "Android-specific privacy policy exists in repo — future Android version?",
+        "Stats fetched daily by app-dashboard, not this repo directly"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "MealSight / NutriLens",
+      "repo": "NutriLens",
+      "type": "iOS App",
+      "status": "active",
+      "status_note": "on App Store",
+      "description": "iOS meal tracker app with a widget extension and a backend component.",
+      "stack": ["Swift", "iOS Widget", "JavaScript", "Backend"],
+      "links": {
+        "App Store": ""
+      },
+      "schedulers": [],
+      "secrets": [
+        { "name": "ASC_KEY_ID",      "purpose": "Shared with PatchPal — same ASC account", "where": "app-dashboard GitHub Actions" },
+        { "name": "ASC_ISSUER_ID",   "purpose": "Shared with PatchPal",                    "where": "app-dashboard GitHub Actions" },
+        { "name": "ASC_PRIVATE_KEY", "purpose": "Shared with PatchPal",                    "where": "app-dashboard GitHub Actions" }
+      ],
+      "todos": [
+        "Confirm if App Store listing name is MealSight or NutriLens and align repo name"
+      ],
+      "notes": [
+        "Stats fetched daily by app-dashboard, not this repo directly"
+      ],
+      "warnings": [
+        "Naming mismatch: repo is 'NutriLens' but app is called 'MealSight'. Align the names."
+      ]
+    },
+    {
+      "name": "app-dashboard",
+      "repo": "app-dashboard",
+      "type": "Automation",
+      "status": "active",
+      "status_note": "running daily",
+      "description": "Daily automation that fetches App Store Connect stats for PatchPal and MealSight, updates a GitHub Gist with data.json, generates a dashboard HTML, and emails a summary to sushwason@gmail.com.",
+      "stack": ["Python 3.12", "GitHub Actions", "PyJWT", "HTML", "Gmail SMTP"],
+      "links": {
+        "GitHub Actions": "https://github.com/sushantwason/app-dashboard/actions",
+        "Gist Dashboard": ""
+      },
+      "schedulers": [
+        {
+          "name": "daily-dashboard.yml",
+          "where": "GitHub Actions",
+          "schedule": "0 17 * * * (UTC)",
+          "notes": "9 AM PST / 10 AM PDT — drifts 1hr during daylight saving"
+        }
+      ],
+      "secrets": [
+        { "name": "ASC_KEY_ID",          "purpose": "App Store Connect API",        "where": "GitHub Actions secrets" },
+        { "name": "ASC_ISSUER_ID",       "purpose": "App Store Connect API",        "where": "GitHub Actions secrets" },
+        { "name": "ASC_PRIVATE_KEY",     "purpose": "App Store Connect .p8 key",    "where": "GitHub Actions secrets" },
+        { "name": "GIST_PAT",            "purpose": "Update dashboard Gist",        "where": "GitHub Actions secrets" },
+        { "name": "GMAIL_APP_PASSWORD",  "purpose": "Send from patchpalfeedback@", "where": "GitHub Actions secrets" },
+        { "name": "TD_EMAIL",            "purpose": "TelemetryDeck login",          "where": "GitHub Actions secrets" },
+        { "name": "TD_PASSWORD",         "purpose": "TelemetryDeck password",       "where": "GitHub Actions secrets" }
+      ],
+      "todos": [
+        "Fix cron drift: change to '0 16 * * *' to fire at 9 AM PDT during daylight saving"
+      ],
+      "notes": [
+        "ASC API data delayed 24-72 hrs by Apple — numbers will always lag vs. the dashboard UI. Cannot be fixed.",
+        "Email sent from patchpalfeedback@gmail.com to sushwason@gmail.com",
+        "Key script: scripts/update_dashboard.py | Email template: dashboard_email.html"
+      ],
+      "warnings": [
+        "Cron fires at 10 AM PDT (not 9 AM) during daylight saving (Mar-Nov). Fix: change to '0 16 * * *'."
+      ]
+    },
+    {
+      "name": "SafeSF",
+      "repo": "safesf",
+      "type": "ML / Web App",
+      "status": "active",
+      "status_note": "deployed on GCP",
+      "description": "ML system to predict San Francisco 311 service request volumes and patterns, helping the city allocate resources proactively. Includes a REST API, interactive dashboard with maps, and automated daily data updates.",
+      "stack": ["Python", "FastAPI", "React", "Plotly.js", "Mapbox", "XGBoost", "Prophet", "scikit-learn", "BigQuery", "Cloud Run", "GCP"],
+      "links": {
+        "Live Dashboard": ""
+      },
+      "schedulers": [
+        {
+          "name": "Data updater",
+          "where": "GCP Cloud Scheduler",
+          "schedule": "Daily at 6 AM PT",
+          "notes": "Fetches from SF 311 Open Data portal"
+        }
+      ],
+      "secrets": [
+        { "name": "GCP Service Account", "purpose": "Cloud Run, BigQuery, Cloud Storage", "where": "GCP IAM" }
+      ],
+      "todos": [],
+      "notes": [
+        "Data source: SF 311 public portal — 5M+ requests from 2008 to present",
+        "MIT licensed",
+        "ML models: Volume Predictor (XGBoost+Prophet, ~15% MAPE), Hotspot Detector (DBSCAN, 85% precision), Category Classifier (RF+NLP, 92% accuracy)"
+      ],
+      "warnings": []
+    }
+  ]
+}
