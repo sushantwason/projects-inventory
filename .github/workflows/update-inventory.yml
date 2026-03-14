@@ -1,0 +1,44 @@
+name: Update Projects Inventory
+
+on:
+  schedule:
+    # 9 AM PST = 17:00 UTC  (fires at 10 AM PDT during daylight saving)
+    - cron: '0 17 * * *'
+    # 6 PM PST = 02:00 UTC  (fires at 7 PM PDT during daylight saving)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-inventory:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run inventory updater
+        env:
+          INVENTORY_PAT: ${{ secrets.INVENTORY_PAT }}
+        run: python scripts/update_inventory.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "inventory-bot"
+          git config user.email "noreply@github.com"
+          git add projects.md projects.html
+          if git diff --staged --quiet; then
+            echo "No changes detected — skipping commit."
+          else
+            git commit -m "Update inventory - $(TZ='America/Los_Angeles' date +'%B %-d, %Y %I:%M %p PT')"
+            git push
+          fi
