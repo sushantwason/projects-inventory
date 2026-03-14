@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sushant's Projects</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f0f0f;color:#e0e0e0;min-height:100vh;padding:40px 24px}
+    .container{max-width:960px;margin:0 auto}
+    header{margin-bottom:40px}
+    header h1{font-size:28px;font-weight:700;color:#fff}
+    header p{color:#666;font-size:14px;margin-top:6px}
+    .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:48px}
+    .summary-card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:20px}
+    .summary-card .label{font-size:12px;color:#666;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+    .summary-card .value{font-size:22px;font-weight:700;color:#fff}
+    .summary-card .sub{font-size:12px;color:#555;margin-top:4px}
+    .project-card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;padding:28px;margin-bottom:20px}
+    .project-card:hover{border-color:#3a3a3a}
+    .project-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+    .project-name{font-size:20px;font-weight:700;color:#fff}
+    .project-sub{font-size:13px;color:#555;margin-top:2px}
+    .badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px}
+    .badge.active{background:#0d2b1a;color:#34d399;border:1px solid #065f46}
+    .badge.inactive{background:#1f1f1f;color:#888;border:1px solid #333}
+    .desc{font-size:14px;color:#aaa;line-height:1.6;margin-bottom:20px}
+    .section-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#555;margin-bottom:10px}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
+    .tag{font-size:12px;background:#222;border:1px solid #333;color:#bbb;padding:3px 10px;border-radius:6px}
+    .links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+    .link-btn{font-size:13px;color:#60a5fa;text-decoration:none;background:#1e2a3a;border:1px solid #2a3d55;padding:5px 12px;border-radius:8px}
+    .link-btn:hover{background:#243246}
+    .link-btn.placeholder{color:#444;background:#1a1a1a;border-color:#2a2a2a;cursor:default}
+    table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:20px}
+    th{text-align:left;padding:8px 12px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#555;border-bottom:1px solid #2a2a2a}
+    td{padding:9px 12px;border-bottom:1px solid #222;color:#ccc;vertical-align:top}
+    tr:last-child td{border-bottom:none}
+    td code,p code{font-family:'SF Mono','Fira Code',monospace;font-size:12px;background:#222;padding:2px 6px;border-radius:4px;color:#f9a8d4}
+    .todo-list,.notes-list{list-style:none}
+    .todo-list li,.notes-list li{font-size:13px;color:#aaa;padding:6px 0;border-bottom:1px solid #222;display:flex;align-items:flex-start;gap:8px}
+    .todo-list li:last-child,.notes-list li:last-child{border-bottom:none}
+    .todo-list li::before{content:"○";color:#444;flex-shrink:0}
+    .notes-list li::before{content:"·";color:#444;flex-shrink:0}
+    .warning-banner{background:#1f1a0d;border:1px solid #4a3500;border-radius:10px;padding:12px 16px;font-size:13px;color:#f59e0b;margin-bottom:20px}
+    footer{margin-top:48px;text-align:center;font-size:12px;color:#444}
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Sushant's Side Projects</h1>
+    <p>Last updated: March 14, 2026 &nbsp;·&nbsp; Auto-refreshed 9 AM &amp; 6 PM PT via GitHub Actions</p>
+  </header>
+  <div class="summary-grid">
+    <div class="summary-card"><div class="label">Total Projects</div><div class="value">4</div><div class="sub">All tracked</div></div>
+    <div class="summary-card"><div class="label">Active</div><div class="value">4</div><div class="sub">of 4 total</div></div>
+    <div class="summary-card"><div class="label">iOS Apps</div><div class="value">2</div><div class="sub">on App Store</div></div>
+    <div class="summary-card"><div class="label">Active Schedulers</div><div class="value">2</div><div class="sub">across all projects</div></div>
+  </div>
+  
+  <div class="project-card">
+    <div class="project-header">
+      <div>
+        <div class="project-name">PatchPal</div>
+        <div class="project-sub">iOS App · Last push: Mar 11, 2026 (2d ago)</div>
+      </div>
+      <span class="badge active">● Active</span>
+    </div>
+    <p class="desc">iOS app on the App Store. Uses TelemetryDeck for in-app analytics. Legal docs hosted via GitHub Pages. Feedback email: patchpalfeedback@gmail.com.</p>
+    
+    <div class="section-label">Tech Stack</div>
+    <div class="tags"><span class="tag">iOS</span><span class="tag">Swift</span><span class="tag">TelemetryDeck</span><span class="tag">GitHub Pages</span></div>
+    <div class="section-label">Links</div>
+    <div class="links"><a class="link-btn" href="https://github.com/sushantwason/patchpal-legal" target="_blank">GitHub</a><a class="link-btn" href="https://sushantwason.github.io/patchpal-legal/" target="_blank">Privacy Policy</a><span class="link-btn placeholder">App Store — add link</span></div>
+    
+    
+            <div class="section-label">Secrets</div>
+            <table><tr><th>Secret</th><th>Purpose</th><th>Where Stored</th></tr><tr><td><code>ASC_KEY_ID</code></td><td>App Store Connect API key ID</td><td>app-dashboard GitHub Actions</td></tr><tr><td><code>ASC_ISSUER_ID</code></td><td>App Store Connect issuer ID</td><td>app-dashboard GitHub Actions</td></tr><tr><td><code>ASC_PRIVATE_KEY</code></td><td>App Store Connect .p8 key</td><td>app-dashboard GitHub Actions</td></tr><tr><td><code>TD_EMAIL</code></td><td>TelemetryDeck login</td><td>app-dashboard GitHub Actions</td></tr><tr><td><code>TD_PASSWORD</code></td><td>TelemetryDeck password</td><td>app-dashboard GitHub Actions</td></tr></table>
+    
+    <div class="section-label">Notes</div><ul class="notes-list"><li>Android-specific privacy policy exists in repo — future Android version?</li><li>Stats fetched daily by app-dashboard, not this repo directly</li></ul>
+  </div>
+  <div class="project-card">
+    <div class="project-header">
+      <div>
+        <div class="project-name">MealSight / NutriLens</div>
+        <div class="project-sub">iOS App · Last push: Mar 11, 2026 (2d ago)</div>
+      </div>
+      <span class="badge active">● Active</span>
+    </div>
+    <p class="desc">Meal Tracker</p>
+    <div class="warning-banner">⚠️ Naming mismatch: repo is 'NutriLens' but app is called 'MealSight'. Align the names.</div>
+    <div class="section-label">Tech Stack</div>
+    <div class="tags"><span class="tag">Swift</span><span class="tag">iOS Widget</span><span class="tag">JavaScript</span><span class="tag">Backend</span></div>
+    <div class="section-label">Links</div>
+    <div class="links"><a class="link-btn" href="https://github.com/sushantwason/NutriLens" target="_blank">GitHub</a><span class="link-btn placeholder">App Store — add link</span></div>
+    
+    
+            <div class="section-label">Secrets</div>
+            <table><tr><th>Secret</th><th>Purpose</th><th>Where Stored</th></tr><tr><td><code>ASC_KEY_ID</code></td><td>Shared with PatchPal — same ASC account</td><td>app-dashboard GitHub Actions</td></tr><tr><td><code>ASC_ISSUER_ID</code></td><td>Shared with PatchPal</td><td>app-dashboard GitHub Actions</td></tr><tr><td><code>ASC_PRIVATE_KEY</code></td><td>Shared with PatchPal</td><td>app-dashboard GitHub Actions</td></tr></table>
+    <div class="section-label">Open TODOs</div><ul class="todo-list"><li>Confirm if App Store listing name is MealSight or NutriLens and align repo name</li></ul>
+    <div class="section-label">Notes</div><ul class="notes-list"><li>Stats fetched daily by app-dashboard, not this repo directly</li></ul>
+  </div>
+  <div class="project-card">
+    <div class="project-header">
+      <div>
+        <div class="project-name">app-dashboard</div>
+        <div class="project-sub">Automation · Last push: Mar 11, 2026 (2d ago)</div>
+      </div>
+      <span class="badge active">● Active</span>
+    </div>
+    <p class="desc">Daily automation that fetches App Store Connect stats for PatchPal and MealSight, updates a GitHub Gist with data.json, generates a dashboard HTML, and emails a summary to sushwason@gmail.com.</p>
+    <div class="warning-banner">⚠️ Cron fires at 10 AM PDT (not 9 AM) during daylight saving (Mar-Nov). Fix: change to '0 16 * * *'.</div>
+    <div class="section-label">Tech Stack</div>
+    <div class="tags"><span class="tag">Python 3.12</span><span class="tag">GitHub Actions</span><span class="tag">PyJWT</span><span class="tag">HTML</span><span class="tag">Gmail SMTP</span></div>
+    <div class="section-label">Links</div>
+    <div class="links"><a class="link-btn" href="https://github.com/sushantwason/app-dashboard" target="_blank">GitHub</a><a class="link-btn" href="https://github.com/sushantwason/app-dashboard/actions" target="_blank">GitHub Actions</a><span class="link-btn placeholder">Gist Dashboard — add link</span></div>
+    
+            <div class="section-label">Schedulers</div>
+            <table><tr><th>Name</th><th>Where</th><th>Schedule</th><th>Notes</th></tr><tr><td>daily-dashboard.yml</td><td>GitHub Actions</td><td><code>0 17 * * * (UTC)</code></td><td>9 AM PST / 10 AM PDT — drifts 1hr during daylight saving</td></tr></table>
+    
+            <div class="section-label">Secrets</div>
+            <table><tr><th>Secret</th><th>Purpose</th><th>Where Stored</th></tr><tr><td><code>ASC_KEY_ID</code></td><td>App Store Connect API</td><td>GitHub Actions secrets</td></tr><tr><td><code>ASC_ISSUER_ID</code></td><td>App Store Connect API</td><td>GitHub Actions secrets</td></tr><tr><td><code>ASC_PRIVATE_KEY</code></td><td>App Store Connect .p8 key</td><td>GitHub Actions secrets</td></tr><tr><td><code>GIST_PAT</code></td><td>Update dashboard Gist</td><td>GitHub Actions secrets</td></tr><tr><td><code>GMAIL_APP_PASSWORD</code></td><td>Send from patchpalfeedback@</td><td>GitHub Actions secrets</td></tr><tr><td><code>TD_EMAIL</code></td><td>TelemetryDeck login</td><td>GitHub Actions secrets</td></tr><tr><td><code>TD_PASSWORD</code></td><td>TelemetryDeck password</td><td>GitHub Actions secrets</td></tr></table>
+    <div class="section-label">Open TODOs</div><ul class="todo-list"><li>Fix cron drift: change to '0 16 * * *' to fire at 9 AM PDT during daylight saving</li></ul>
+    <div class="section-label">Notes</div><ul class="notes-list"><li>ASC API data delayed 24-72 hrs by Apple — numbers will always lag vs. the dashboard UI. Cannot be fixed.</li><li>Email sent from patchpalfeedback@gmail.com to sushwason@gmail.com</li><li>Key script: scripts/update_dashboard.py | Email template: dashboard_email.html</li></ul>
+  </div>
+  <div class="project-card">
+    <div class="project-header">
+      <div>
+        <div class="project-name">SafeSF</div>
+        <div class="project-sub">ML / Web App · Last push: Mar 7, 2026 (6d ago)</div>
+      </div>
+      <span class="badge active">● Active</span>
+    </div>
+    <p class="desc">ML system to predict San Francisco 311 service request volumes and patterns, helping the city allocate resources proactively. Includes a REST API, interactive dashboard with maps, and automated daily data updates.</p>
+    
+    <div class="section-label">Tech Stack</div>
+    <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Plotly.js</span><span class="tag">Mapbox</span><span class="tag">XGBoost</span><span class="tag">Prophet</span><span class="tag">scikit-learn</span><span class="tag">BigQuery</span><span class="tag">Cloud Run</span><span class="tag">GCP</span></div>
+    <div class="section-label">Links</div>
+    <div class="links"><a class="link-btn" href="https://github.com/sushantwason/safesf" target="_blank">GitHub</a><span class="link-btn placeholder">Live Dashboard — add link</span></div>
+    
+            <div class="section-label">Schedulers</div>
+            <table><tr><th>Name</th><th>Where</th><th>Schedule</th><th>Notes</th></tr><tr><td>Data updater</td><td>GCP Cloud Scheduler</td><td><code>Daily at 6 AM PT</code></td><td>Fetches from SF 311 Open Data portal</td></tr></table>
+    
+            <div class="section-label">Secrets</div>
+            <table><tr><th>Secret</th><th>Purpose</th><th>Where Stored</th></tr><tr><td><code>GCP Service Account</code></td><td>Cloud Run, BigQuery, Cloud Storage</td><td>GCP IAM</td></tr></table>
+    
+    <div class="section-label">Notes</div><ul class="notes-list"><li>Data source: SF 311 public portal — 5M+ requests from 2008 to present</li><li>MIT licensed</li><li>ML models: Volume Predictor (XGBoost+Prophet, ~15% MAPE), Hotspot Detector (DBSCAN, 85% precision), Category Classifier (RF+NLP, 92% accuracy)</li></ul>
+  </div>
+  
+  <div class="project-card" style="border-color:#4a3500;">
+    <div class="project-header">
+      <div class="project-name" style="color:#f59e0b;">⚠️ New Repos Detected</div>
+    </div>
+    <p class="desc">These repos are not yet in the inventory. Add them to <code>config.json</code> when ready.</p>
+    <table><tr><th>Repo</th><th>Description</th><th>Last Push</th></tr><tr><td><a href="https://github.com/sushantwason/projects-inventory" target="_blank">projects-inventory</a></td><td>Master inventory of all side projects</td><td>Mar 14, 2026</td></tr></table>
+  </div>
+  <footer>
+    Manual fields edited in <code>config.json</code> · Auto fields refreshed from GitHub API<br><br>
+    Generated by GitHub Actions · March 14, 2026
+  </footer>
+</div>
+</body>
+</html>
