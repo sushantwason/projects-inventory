@@ -23,7 +23,7 @@
 
 **Status:** 🟢 Active — on App Store
 
-**Last Push:** Mar 11, 2026 (17d ago)
+**Last Push:** Mar 11, 2026 (18d ago)
 
 **Tech Stack:** `iOS` · `Swift` · `TelemetryDeck` · `GitHub Pages`
 
@@ -127,7 +127,7 @@
 
 **Status:** 🟢 Active — deployed on GCP
 
-**Last Push:** Mar 7, 2026 (21d ago)
+**Last Push:** Mar 7, 2026 (22d ago)
 
 **Tech Stack:** `Python` · `FastAPI` · `React` · `Plotly.js` · `Mapbox` · `XGBoost` · `Prophet` · `scikit-learn` · `BigQuery` · `Cloud Run` · `GCP`
 
@@ -158,6 +158,6 @@
 
 | Repo | Description | Last Push |
 |---|---|---|
-| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Mar 28, 2026 |
+| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Mar 29, 2026 |
 
 > Add these to `config.json` when ready.
