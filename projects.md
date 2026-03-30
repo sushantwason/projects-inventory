@@ -10,7 +10,7 @@
 
 | Project | Type | Status | Last Push |
 |---|---|---|---|
-| [PatchPal](#patchpal) | iOS App | 🟢 Active | Mar 11, 2026 |
+| [PatchPal](#patchpal) | iOS App | 🟢 Active | Mar 30, 2026 |
 | [MealSight / NutriLens](#mealsight--nutrilens) | iOS App | 🟢 Active | Mar 11, 2026 |
 | [app-dashboard](#app-dashboard) | Automation | 🟢 Active | Mar 14, 2026 |
 | [SafeSF](#safesf) | ML / Web App | 🟢 Active | Mar 7, 2026 |
@@ -23,7 +23,7 @@
 
 **Status:** 🟢 Active — on App Store
 
-**Last Push:** Mar 11, 2026 (18d ago)
+**Last Push:** Mar 30, 2026 (today)
 
 **Tech Stack:** `iOS` · `Swift` · `TelemetryDeck` · `GitHub Pages`
 
@@ -127,7 +127,7 @@
 
 **Status:** 🟢 Active — deployed on GCP
 
-**Last Push:** Mar 7, 2026 (22d ago)
+**Last Push:** Mar 7, 2026 (23d ago)
 
 **Tech Stack:** `Python` · `FastAPI` · `React` · `Plotly.js` · `Mapbox` · `XGBoost` · `Prophet` · `scikit-learn` · `BigQuery` · `Cloud Run` · `GCP`
 
@@ -158,6 +158,6 @@
 
 | Repo | Description | Last Push |
 |---|---|---|
-| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Mar 29, 2026 |
+| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Mar 30, 2026 |
 
 > Add these to `config.json` when ready.
