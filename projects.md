@@ -23,7 +23,7 @@
 
 **Status:** 🟢 Active — on App Store
 
-**Last Push:** Mar 30, 2026 (15d ago)
+**Last Push:** Mar 30, 2026 (16d ago)
 
 **Tech Stack:** `iOS` · `Swift` · `TelemetryDeck` · `GitHub Pages`
 
@@ -158,6 +158,6 @@
 
 | Repo | Description | Last Push |
 |---|---|---|
-| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Apr 14, 2026 |
+| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Apr 15, 2026 |
 
 > Add these to `config.json` when ready.
