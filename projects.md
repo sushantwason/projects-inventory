@@ -127,7 +127,7 @@
 
 **Status:** 🟢 Active — deployed on GCP
 
-**Last Push:** Mar 7, 2026 (2mo ago)
+**Last Push:** Mar 7, 2026 (3mo ago)
 
 **Tech Stack:** `Python` · `FastAPI` · `React` · `Plotly.js` · `Mapbox` · `XGBoost` · `Prophet` · `scikit-learn` · `BigQuery` · `Cloud Run` · `GCP`
 
@@ -158,6 +158,6 @@
 
 | Repo | Description | Last Push |
 |---|---|---|
-| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Jun 4, 2026 |
+| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Jun 5, 2026 |
 
 > Add these to `config.json` when ready.
