@@ -84,7 +84,7 @@
 
 **Status:** 🟢 Active — running daily
 
-**Last Push:** Mar 14, 2026 (2mo ago)
+**Last Push:** Mar 14, 2026 (3mo ago)
 
 **Tech Stack:** `Python 3.12` · `GitHub Actions` · `PyJWT` · `HTML` · `Gmail SMTP`
 
@@ -158,6 +158,6 @@
 
 | Repo | Description | Last Push |
 |---|---|---|
-| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Jun 11, 2026 |
+| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Jun 12, 2026 |
 
 > Add these to `config.json` when ready.
