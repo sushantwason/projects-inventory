@@ -54,7 +54,7 @@
 
 **Status:** 🟢 Active — on App Store
 
-**Last Push:** Mar 11, 2026 (4mo ago)
+**Last Push:** Mar 11, 2026 (5mo ago)
 
 **Tech Stack:** `Swift` · `iOS Widget` · `JavaScript` · `Backend`
 
@@ -158,6 +158,6 @@
 
 | Repo | Description | Last Push |
 |---|---|---|
-| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Aug 7, 2026 |
+| [projects-inventory](https://github.com/sushantwason/projects-inventory) | Master inventory of all side projects | Aug 8, 2026 |
 
 > Add these to `config.json` when ready.
